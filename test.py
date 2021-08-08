@@ -11,6 +11,6 @@ SMS_SID = os.environ['SMS_SID']
 SMS_TOKEN = os.environ['SMS_TOKEN']
 SMS_FROM_NUMBER = os.environ['SMS_FROM_NUMBER']
 SMS_TO_NUMBER = os.environ['SMS_TO_NUMBER']
-print(SMS_FROM_NUMBER)
+print(SMS_FROM_NUMBER+"12213")
 print(SMS_SID)
-# send_sms(SMS_TO_NUMBER, "你好，测试")
+send_sms(SMS_TO_NUMBER, "你好，测试")
