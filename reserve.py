@@ -135,7 +135,7 @@ if __name__ == "__main__":
     tomorrow = (datetime.date.today() + datetime.timedelta(days=config.RESERVE_DATE)).strftime("%Y-%m-%d")
     
     res = False
-    cnt = 10  # 持续10轮
+    cnt = 1  # 持续10轮
     time.sleep(48)  # 18:01:50 提前2秒抢
     while((res == False) and (cnt > 0)):
         for fdid in range(27, 27+6):
