@@ -124,7 +124,7 @@ def submit_order(usrId, ggId, ffId, fdId, start_time, end_time):
             json.loads(result.text)["money"], start_time[0:10], start_time[-8:-3], end_time[-8:-3]
         )
         send_email(EMAIL_TO, '体育馆预约', content)
-        send_sms(SMS_TO_NUMBER, content)
+        # send_sms(SMS_TO_NUMBER, content)
         return True
 
 
