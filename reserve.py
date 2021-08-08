@@ -24,16 +24,6 @@ EMAIL_FROM = os.environ['EMAIL_FROM']
 EMAIL_PWD = os.environ['EMAIL_PWD']
 EMAIL_TO = os.environ['EMAIL_TO']
 
-print(type(GYM_USER))
-print(GYM_PWD[:-1])
-print(SMS_SID[:-1])
-print(SMS_TOKEN[:-1])
-print(SMS_FROM_NUMBER[:-1])
-print(SMS_TO_NUMBER[:-1])
-print(EMAIL_FROM[:-1])
-print(EMAIL_PWD[:-1])
-print(EMAIL_TO[:-1])
-
 
 # 使用邮箱发送通知功能
 def send_email(email, subject, msg):

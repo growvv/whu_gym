@@ -14,8 +14,7 @@ SMS_TO_NUMBER = os.environ['SMS_TO_NUMBER']
 
 print(type(SMS_FROM_NUMBER))
 print(SMS_FROM_NUMBER[:-1])
+print(SMS_FROM_NUMBER[:])
 print(SMS_SID[:-1])
-# send_sms(SMS_TO_NUMBER, "你好，测试")
+send_sms(SMS_TO_NUMBER, "你好，测试")
 
-EMAIL_TO = os.environ['EMAIL_TO']
-send_email(EMAIL_TO, '体育馆预约', "你好")
