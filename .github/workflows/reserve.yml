@@ -24,19 +24,6 @@ jobs:
     
     - name: Install Dependence
       run: pip install requests twilio
-      
-    - name: Run test
-      run: python test.py
-      env:
-        GYM_USER: ${{ secrets.GYM_USER }}  
-        GYM_PWD: ${{ secrets.GYM_PWD }}  
-        SMS_SID: ${{ secrets.SMS_SID }}  
-        SMS_TOKEN: ${{ secrets.SMS_TOKEN }}  
-        SMS_FROM_NUMBER: ${{ secrets.SMS_FROM_NUMBER }}  
-        SMS_TO_NUMBER: ${{ secrets.SMS_TO_NUMBER }}  
-        EMAIL_FROM: ${{ secrets.EMAIL_FROM }}  
-        EMAIL_PWD: ${{ secrets.EMAIL_PWD }}  
-        EMAIL_TO: ${{ secrets.EMAIL_TO }}  
         
     - name: Run main
       run: python reserve.py
