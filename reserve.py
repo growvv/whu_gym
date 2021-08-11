@@ -156,7 +156,7 @@ if __name__ == "__main__":
 
     while((res == False) and (cnt > 0)):
         for fdid in range(27, 27+6):
-            res = submit_order(usr_id, config.GGID, config.FFID, config.FDID, tomorrow+config.RESERVE_START_TIME, tomorrow+config.RESERVE_END_TIME)
+            res = submit_order(usr_id, config.GGID, config.FFID, fdid, tomorrow+" "+config.RESERVE_START_TIME, tomorrow+" "+config.RESERVE_END_TIME)
             # res = submit_order(usr_id, 2, 5, 36, tomorrow+" 19:30:00", tomorrow+" 20:30:00")
             time.sleep(0.1)
             if res == True:
