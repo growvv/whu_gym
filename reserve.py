@@ -70,13 +70,11 @@ URL_BASE = "http://gym.whu.edu.cn:80/"
 
 # 登录系统，获取cookies
 def login(user_name, user_pwd):
-    print(user_name[:-1], user_pwd[1:])
     url = URL_BASE + "loginAction!UserLogin"
     login_params = {
         "name":user_name,
         "password":user_pwd
     }
-    print(login_params)
     result = requests.post(url=url, headers=header, data=login_params)
     print('提交登录：'+result.text)
     status = json.loads(result.text)['status']
@@ -126,7 +124,7 @@ def submit_order(usrId, ggId, ffId, fdId, start_time, end_time):
             json.loads(result.text)["money"], start_time[0:10], start_time[-8:-3], end_time[-8:-3]
         )
         send_email(EMAIL_TO, '体育馆预约', content)
-        # send_sms(SMS_TO_NUMBER, content)
+        send_sms(SMS_TO_NUMBER, content)
         return True
 
 
@@ -136,9 +134,26 @@ if __name__ == "__main__":
     usr_id = int(get_user_info(cookies)[-1]) + 5
     tomorrow = (datetime.date.today() + datetime.timedelta(days=config.RESERVE_DATE)).strftime("%Y-%m-%d")
     
+    
+    # 延时
+    while True:
+        now = datetime.datetime.now()
+        hour = now.hour
+        minute = now.minute
+        second = now.second
+        print(hour, minute, second)
+        if hour == 10 and minute == 1 and second <= 47:
+            time.sleep(1)
+            print("sleep 1")
+        else:
+            break
+
+    # time.sleep(48)  # 18:01:50 提前2秒抢
+
+
     res = False
-    cnt = 1  # 持续10轮
-    time.sleep(48)  # 18:01:50 提前2秒抢
+    cnt = 10  # 持续10轮
+
     while((res == False) and (cnt > 0)):
         for fdid in range(27, 27+6):
             res = submit_order(usr_id, config.GGID, config.FFID, config.FDID, tomorrow+config.RESERVE_START_TIME, tomorrow+config.RESERVE_END_TIME)

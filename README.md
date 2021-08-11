@@ -22,7 +22,7 @@ res = submit_order(usr_id, 2, 5, 36, tomorrow+" 19:30:00", tomorrow+" 20:30:00")
 
 2. 设置Secrets
 
-将`config.py`注明的变量在repo的Setting中一一设置
+将`config.py`注明的变量在repo的Setting->Secrets中一一设置
 
 变量名和值默认都是字符串类型，不需要加引号（重点）
 
