@@ -20,10 +20,10 @@ print(EMAIL_TO[:-1])
 print(EMAIL_TO[1:])
 
 
-# send_email(EMAIL_TO, '测试', '测试内容')
+send_email(EMAIL_TO, '测试', '测试内容')
 
 
-# send_sms(SMS_TO_NUMBER, "你好，测试")
+send_sms(SMS_TO_NUMBER, "你好，测试")
 
 # 获取环境变量
 GYM_USER = os.environ['GYM_USER']

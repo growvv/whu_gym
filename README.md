@@ -24,6 +24,8 @@ res = submit_order(usr_id, 2, 5, 36, tomorrow+" 19:30:00", tomorrow+" 20:30:00")
 
 将`config.py`注明的变量在repo的Setting中一一设置
 
+变量名和值默认都是字符串类型，不需要加引号（重点）
+
 3. 安装环境
 
 需要先安装`requests、twilio` 库，再运行`myreserve.py`
