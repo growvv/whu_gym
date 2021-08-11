@@ -1,6 +1,6 @@
 import datetime
 import time
-from reserve import EMAIL_TO, send_email, send_sms
+from reserve import EMAIL_TO, send_email, send_sms, login
 import os
 
 
@@ -20,7 +20,13 @@ print(EMAIL_TO[:-1])
 print(EMAIL_TO[1:])
 
 
-send_email(EMAIL_TO, '测试', '测试内容')
+# send_email(EMAIL_TO, '测试', '测试内容')
 
 
-send_sms(SMS_TO_NUMBER, "你好，测试")
+# send_sms(SMS_TO_NUMBER, "你好，测试")
+
+# 获取环境变量
+GYM_USER = os.environ['GYM_USER']
+GYM_PWD = os.environ['GYM_PWD']
+
+login(GYM_USER, GYM_PWD)
