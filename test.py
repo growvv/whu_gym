@@ -19,8 +19,8 @@ print(SMS_TO_NUMBER[1:])
 print(EMAIL_TO[:-1])
 print(EMAIL_TO[1:])
 
-# send_sms(SMS_TO_NUMBER, "你好，测试")
-
 
 send_email(EMAIL_TO, '测试', '测试内容')
 
+
+send_sms(SMS_TO_NUMBER, "你好，测试")
