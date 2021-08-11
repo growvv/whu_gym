@@ -70,6 +70,7 @@ URL_BASE = "http://gym.whu.edu.cn:80/"
 
 # 登录系统，获取cookies
 def login(user_name, user_pwd):
+    print(user_name, user_pwd)
     url = URL_BASE + "loginAction!UserLogin"
     login_params = {
         "name":user_name,
