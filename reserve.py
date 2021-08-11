@@ -70,12 +70,13 @@ URL_BASE = "http://gym.whu.edu.cn:80/"
 
 # 登录系统，获取cookies
 def login(user_name, user_pwd):
-    print(user_name, user_pwd)
+    print(user_name[:-1], user_pwd[1:])
     url = URL_BASE + "loginAction!UserLogin"
     login_params = {
         "name":user_name,
         "password":user_pwd
     }
+    print(login_params)
     result = requests.post(url=url, headers=header, data=login_params)
     print('提交登录：'+result.text)
     status = json.loads(result.text)['status']
