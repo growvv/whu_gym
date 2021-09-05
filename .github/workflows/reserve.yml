@@ -4,9 +4,9 @@ name: Reserve Gym
 
 on:
   push:
-  schedule:
+  # schedule:
     # utc时间，减8
-#     - cron: '1 10 * * *'
+    # - cron: '1 10 * * *'
 
 jobs:
   build:
