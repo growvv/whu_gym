@@ -1,3 +1,5 @@
+**已失效！已失效！已失效！**
+
 # whu_gym
 自动预约WHU体育场馆脚本，基于 zfb132 的 [gym_place_order](https://github.com/zfb132/gym_place_order) 进行改造，并增加Github Action支持
 
